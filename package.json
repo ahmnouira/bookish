@@ -8,7 +8,9 @@
     "start": "next start",
     "format:fix": "prettier --write \"**/*.{ts,tsx}\"",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "cypress run",
+    "e2e:open": "cypress open"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
