@@ -28,12 +28,16 @@
     "ts-node": "^10.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-typescript": "^7.14.5",
     "@testing-library/react": "^12.0.0",
     "@types/cypress": "^1.1.3",
     "@types/faker": "^5.5.7",
     "@types/jest": "^26.0.24",
     "@types/json-server": "^0.14.4",
     "@types/react": "17.0.14",
+    "babel-jest": "^27.0.6",
     "cypress": "^8.0.0",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",

@@ -28,6 +28,11 @@ describe('Bookish application', () => {
         name: 'Domain-driven',
         id: '2',
       },
+
+      {
+        name: 'Building Microservices',
+        id: '3',
+      },
     ]
     return books.map(async (book) => {
       try {
@@ -49,11 +54,15 @@ describe('Bookish application', () => {
 
   it('Shows a book list', () => {
     cy.visit('http://localhost:3000/')
-    cy.get('div.book-item').should((books) => {
-      expect(books).to.have.length(2)
+    cy.get('dib[id="book-list]').should('exist')
+    cy.get('div.book-item').should((items) => {
+      expect(items).to.have.length(3)
 
-      const titles = [...books].map((book) => book.querySelector('h2').innerHTML)
-      expect(titles).to.deep.equal(['Refactoring', 'Domain-driven'])
+      console.log('items', items)
+      /*
+      const titles = items.map((book) => book.querySelector('h2').innerHTML)
+      expect(titles).to.deep.equal(['Refactoring', 'Domain-driven', 'Building Microservices'])
+      */
     })
   })
 })
