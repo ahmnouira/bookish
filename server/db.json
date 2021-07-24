@@ -1,0 +1,12 @@
+{
+  "books": [
+    {
+      "id": "book1",
+      "name": "Refactoring"
+    },
+    {
+      "id": "book2",
+      "name": "Domain-driven"
+    }
+  ]
+}
