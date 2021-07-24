@@ -5,21 +5,9 @@ import Box from '@material-ui/core/Box'
 import ProTip from '../components/ProTip'
 import Link from '../components/Link'
 import Copyright from '../components/Copyright'
-import { Book } from '../models/book'
-import { BookList } from '../components/BookList/BookList'
+import { BookListContainer } from '../components/BookListContainer/BookListContianer'
 
 export default function Index() {
-  const books: Book[] = [
-    {
-      id: 'book1',
-      name: 'Refactoring',
-    },
-    {
-      id: 'book2',
-      name: 'Domain-driven',
-    },
-  ]
-
   return (
     <Container maxWidth='sm'>
       <Box sx={{ my: 4 }}>
@@ -29,7 +17,7 @@ export default function Index() {
         <Link href='/about' color='secondary'>
           Go to the about page
         </Link>
-        <BookList books={books} />
+        <BookListContainer />
         <ProTip />
         <Copyright />
       </Box>

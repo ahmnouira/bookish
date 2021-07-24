@@ -11,6 +11,7 @@ const middlewares = jsonServer.defaults()
 
 /* Custom output example*/
 // In this example, returned resources will be wrapped in a body property
+
 router.render = (_req: any, res: any) => {
   const { data } = res.locals
 
@@ -28,25 +29,21 @@ server.use((req: any, _res, next) => {
   next()
 })
 
-server.use((req: any, res, next) => {
+server.use((req, res, next) => {
   if (req.method === 'DELETE' && req.query['_cleanup']) {
     const db = router.db
-
-    db.set(req.entity, []).write()
-
-    if (relations[req.entity]) {
-      db.set(relations[req.entity], []).write()
-    }
-
+    db.set('books', []).write()
     res.sendStatus(204)
   } else {
     next()
   }
 })
 
+/*
 const relations = {
   books: 'reviews',
 }
+*/
 
 server.use(middlewares)
 
