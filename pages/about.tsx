@@ -8,7 +8,6 @@ import Link from '../components/Link'
 import Copyright from '../components/Copyright'
 
 export default function About() {
-
   return (
     <Container maxWidth='sm'>
       <Box sx={{ my: 4 }}>
